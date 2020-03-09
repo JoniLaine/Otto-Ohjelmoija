@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html>
+<title>Otto-ohjelmoija</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<style>
+body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
+.w3-row-padding img {margin-bottom: 12px}
+
+.w3-sidebar {width: 150px;background: #222;}
+
+#main {margin-left: 120px}
+
+@media only screen and (max-width: 600px) {#main {margin-left: 0}}
+</style>
+<body class="w3-black">
+
+<!-- Suurilla näytöillä näkyvät valikot -->
+<nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
+  <!-- Logo -->
+  <img src="botto.black.png" style="width:100%">
+  <a href="#" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-home w3-xxlarge"></i>
+    <p>Alkuun</p>
+  </a>
+  <a href="#yrityksemme" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-user w3-xxlarge"></i>
+    <p>Yrityksemme</p>
+  </a>
+  <a href="#tyonaytteet" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-eye w3-xxlarge"></i>
+    <p>Työnäytteitä</p>
+  </a>
+  <a href="#yhteystiedot" class="w3-bar-item w3-button w3-padding-large w3-hover-black">
+    <i class="fa fa-envelope w3-xxlarge"></i>
+    <p>Yhteystiedot</p>
+  </a>
+</nav>
+
+<!-- pienillä ruuduilla näkyvät valikot -->
+<div class="w3-top w3-hide-large w3-hide-medium" id="myNavbar">
+  <div class="w3-bar w3-hover-gray w3-opacity w3-center w3-small">
+    <a href="#" class="w3-bar-item w3-button" style="width:25% !important">Alkuun</a>
+    <a href="#yrityksemme" class="w3-bar-item w3-button" style="width:25% !important">Yrityksemme</a>
+    <a href="#tyonaytteet" class="w3-bar-item w3-button" style="width:25% !important">Työnäytteitä</a>
+    <a href="#yhteystiedot" class="w3-bar-item w3-button" style="width:25% !important">Yhteystiedot</a>
+  </div>
+</div>
+
+	<!-- Sivu -->
+		<div class="w3-padding-large" id="main">
+	<!-- Header-->
+		<header class="w3-container w3-padding-32 w3-center w3-black" id="home">
+	
+		<h1 class="w3-jumbo"><span class="w3-hide-small"></span> Otto-ohjelmoija</h1>
+		<h3>Koodataan yhdessä</h3>
+		<img src="botto.black.png" alt="botto.logo" class="w3-image" width="100" height="100">
+		</header>
+	
+
+	<!-- Tervetuloa osuus -->
+
+		<div class="w3-content w3-justify w3-text-grey w3-padding-64" id="yrityksemme">
+		<div align ="left">
+		<h1 class="w3-text-light-grey">Tervetuloa!</h1>
+		<hr>
+		<p><span class="w3-large w3-margin-right">Koodataan yhdessä yrityksellenne parempi huominen. Tuore ohjelmointiyrityksemme suunnittelee ja toteuttaa ohjelmiston alusta loppuun yhdessä asiakkaan kanssa.
+			Pääsette yhdessä kanssamme tekemään juuri teille sopivimman ohjelman.</span></p>
+	
+		<br>
+		<br>
+
+		</div>
+	<!-- portfolio-osuus-->
+	
+
+   <div align="left">
+		<div class="w3-padding-64 w3-content" id="tyonaytteet">
+			<h1 class="w3-text-light-grey">Työnäytteitä</h3>  
+				<hr> 
+					<p><span class="w3-large w3-margin-right">Alla pääset tutustumaan esimerkkitöihimme. Ota selvää mitä kaikkea koodilla voi tehdä!
+					Kokeile koodaamista Robotto-robotillamme ja laita Robotto hurraamaan onnistuneelle koodille, pelaa legendaarista venttiä ja kokeile nelilaskintamme.</span></p> 
+		</div>
+  
+   
+		<h1 class="w3-padding-16 w3-text-light-grey">Kokeile koodaamista!</h1>
+		<hr>
+		<p><span class="w3-large w3-margin-right">Laita Robotto-robotti hurraamaan komennolla "robotto.wave();"</span></p>
+	
+</div>
+	 
+
+	<!-- Robotto -->
+  <div align="center">
+	<img id="robo" src="perus.png" width="350" height="320">  
+	<br>
+	<br>
+		
+	<!--kenttä-->
+	  <form onSubmit=myFunction()>
+      <input
+        <input type="text" id="syote" value="">
+	  </form>
+	<br>
+
+
+	<!--napit robotolle-->
+		<button onclick="myFunction()">Vastaa</button>
+		<button onclick="tyhjenna()">Tyhjennä</button><br>
+		<br>
+	<br>	
+	</div>
+
+
+  
+	<!-- ventti -->
+	
+   
+  <div>
+		<h2 class="w3-text-light-grey">Ventti</h2>
+		<link href="styles.css" rel="stylesheet"> 
+		<hr>
+   
+
+  
+	<p><span class="w3-large w3-margin-right">Tuplaklikkaa nappia aloittaaksesi pelin. Pelin päättyessä pelinäkymä sulkeutuu automaattisesti 3 sekunnin kuluttua.</span></p> 
+		
+        <section id="controls">
+		<button onclick="nakyma();">Peli</button>
+		
+		</button>
+        </section>
+		
+<script>
+		
+function nakyma() {
+  var x = document.getElementById("pelinakyma");
+
+  if (x.style.display === "none") {
+    x.style.display = "block";
+  } else {
+    x.style.display = "none";
+  }
+}
+
+
+</script>
+
+			<!-- piilotettu pelinäkymä-->
+		
+		<div id="pelinakyma" hidden>
+		
+		<main>
+		<h2>Jakajan käsi</h1>
+        <section id="dealer-hand" class="hand">
+            <article id="j1" class="card">
+			</article>
+			<article id="j2" class="card">
+			</article>
+			<article id="j3" class="card">
+			</article>
+			<article id="j4" class="card">
+			</article>
+			<article id="j5" class="card">
+			</article>
+ 
+        </section>
+		<h2>Pelaajan käsi</h1>
+        <section id="player-hand" class="hand">
+            <article id="p1" class="card">
+			</article>
+			<article id="p2" class="card">
+			</article>
+			<article id="p3" class="card">
+			</article>
+			<article id="p4" class="card">
+			</article>
+			<article id="p5" class="card">
+			</article>
+
+        </section>
+        <section id="controls">
+            <button onclick="nostakortti()">Nosta</button>
+            <button onclick="jaa()">Jää</button>
+			
+			<!-- <button onclick="window.location.reload();">Alusta</button> -->
+			
+        </section>
+		
+    </main>
+
+	<!--- ventti alkaa näkymän avatessa -->
+	
+	<script src="ventti.js"></script>
+	
+	</div>
+	
+    <footer></footer>
+<div class="center">
+		
+	
+  
+	<div id="loppu">
+		<div id="overlay" class="hidden">
+        <div id="gameover">	
+	</div>
+	</div>
+	
+	</div>
+</div>
+		
+	
+	<!--	<button onclick="window.location.reload();">Lopeta</button> -->
+	
+	<!-- ventti loppu -->
+    
+	<hr>
+	<br>
+	</div>
+	
+	<!--laskin-->
+<div>
+	<p><span class="w3-large w3-margin-right">
+		<h2 class="w3-text-light-grey">Laskin</h2>
+		<link href="styles.css" rel="stylesheet">
+		<fieldset style=background-color:black>
+
+	<b>
+	<p><span class="w3-large w3-margin-right">Anna kaksi kokonaislukua väliltä 0 - 100.</span></p></b>
+
+		<form name = "numerot">
+
+	<br><p><span class="w3-large w3-margin-right">Ensimmäinen luku:</span></p></b>
+		<input type ="number" name="luku1"><br>
+    <p><span class="w3-large w3-margin-right">Toinen luku:</span></p></b>
+		<input type ="number" name="luku2"><br>
+	<br>
+		<input type = "button" value = "Laske" onclick="Laske()">
+		<input type = "button" value = "Tyhjää" onclick="Tyhja()">
+	</form>
+
+	<!--tulostuvat vastaukset-->
+
+	<p id = "summa"></p>	
+	<p id = "erotus"></p>
+	<p id = "tulos"></p>
+	<p id = "jako"></p>
+	<p id = "jaannos"></p>
+	<p id = "pienemmastaSuurempaan"></p>
+	
+    
+    </div>
+  </div>
+    <!-- Portfolio loppuu-->
+
+  <!-- Yhteystiedot-->
+  <div class="w3-padding-64 w3-content w3-text-grey" id="yhteystiedot">
+    <h1 class="w3-text-light-grey">Yhteystiedot</h1>
+    <hr>
+		<div class="w3-section"> 
+		<p><i class="fa fa-map-marker fa-fw w3-text-white w3-xxlarge w3-margin-right"></i>Neulastie 8, 00410 Helsinki</p>
+		<p><i class="fa fa-phone fa-fw w3-text-white w3-xxlarge w3-margin-right"></i> GSM: +358 50 3331234</p>
+		<p><i class="fa fa-envelope fa-fw w3-text-white w3-xxlarge w3-margin-right"> </i> email: otto@ohjelmoija.fi</p>
+		</div><br>
+	<div align="center">
+	<footer>
+		<h3>Koodataan yhdessä parempi huominen yrityksellenne!</h3>
+	</footer>
+	</div>
+	</div>
+	  <!-- Yhteystiedot loppuu-->
+	
+	<!-- scriptit -->
+	
+<script>
+
+function tyhjenna(){
+	document.getElementById("syote").value = "";
+
+}
+</script>
+
+<script>
+
+function myFunction() {
+
+if(document.getElementById("syote").value == "robotto.wave();"){
+
+  var image = document.getElementById("robo");
+  var luku = 1;
+  var id = setInterval(vaihto, 200);
+  
+  function vaihto() {
+    if (luku == 15) {
+      clearInterval(id);
+    } else if (luku % 2 != 0){
+      image.src = "heiluu.png";
+	  luku++;
+    }
+	 else {
+	 image.src = "perus.png";
+	 luku++;
+  }
+}
+}
+
+else {
+var image = document.getElementById("robo");
+image.src = "virhe.png";
+alert("Syntax error!");
+}
+}
+</script>
+
+  
+	<script>
+	function Laske(){
+
+		var luku1 = Number(document.forms["numerot"]["luku1"].value);
+		var luku2 = Number(document.forms["numerot"]["luku2"].value);
+
+		switch (luku1 > 100 || luku2 > 100 || luku1 < 1 || luku2 < 1){
+			case true:
+				window.alert("Luvut eivät ole väliltä 1-100");
+			break;
+		default:
+
+	var summa = luku1 + luku2;
+	var erotus = luku1 - luku2;
+	var tulos = luku1 * luku2;
+	var jako = luku1 / luku2;
+	var jaannos = luku1 % luku2;
+		document.getElementById("summa").innerHTML = "Summa on: " + summa;
+		document.getElementById("erotus").innerHTML = "Erotus on: " + erotus;
+		document.getElementById("jako").innerHTML = "Osamäärä on: " + jako;
+		document.getElementById("tulos").innerHTML = "Tulos on: " + tulos;
+		document.getElementById("jaannos").innerHTML = "Jakojäännös on: " + jaannos;
+
+	var pienemmastaSuurempaan = 0;
+	var teksti = "";
+		if (luku1 <= luku2){
+			for (pienemmastaSuurempaan = luku1; pienemmastaSuurempaan <= luku2; pienemmastaSuurempaan++){
+				teksti += pienemmastaSuurempaan + " ";
+			}
+			document.getElementById("pienemmastaSuurempaan").innerHTML = "Pienemmästä suurempaan: " + teksti;
+		}
+       else{
+			for (pienemmastaSuurempaan = luku2; pienemmastaSuurempaan <= luku1; pienemmastaSuurempaan++){
+				teksti += pienemmastaSuurempaan + " ";
+		}
+	
+		document.getElementById("pienemmastaSuurempaan").innerHTML = "Pienemmästä suurempaan: " + teksti;
+		}
+		}
+	}
+	
+	function Tyhja(){
+		document.forms["numerot"]["luku1"].value = 0;
+		document.forms["numerot"]["luku2"].value = 0;
+	}
+
+
+	</script>
+	
+
+	</body>
+</html>
